@@ -10,7 +10,6 @@ namespace Kolkulator
     {
         static void Main(string[] args)
         {
-            string cho;
             double num1, num2, num3;
             double res1, res2;
 
@@ -18,6 +17,8 @@ namespace Kolkulator
 
             while(true)
             {
+                char cho;
+
                 WriteLine("Kolulator by KoleckOLP, HorseArmore Inc. 18.03.2019");
                 WriteLine("Choose 1-7\n\n" +
                           "1. Addition\n" +
@@ -31,8 +32,8 @@ namespace Kolkulator
                           "8. Real HDD/Flash space\n" +
                           "9. Quit");
                 Write("#");
-                cho = ReadLine();
-                if(cho == "1") //Addition
+                cho = ReadKey().KeyChar;
+                if(cho == '1') //Addition
                 {
                     Clear();
                     WriteLine("type the first number and confirm it by <Enter>");
@@ -46,7 +47,7 @@ namespace Kolkulator
                     WriteLine("the result of {0} + {1} = {2}", num1, num2, res1);
                     shrt.Paktc();
                 }
-                else if(cho == "2") //Subtraction
+                else if(cho == '2') //Subtraction
                 {
                     Clear();
                     WriteLine("type the first number and confirm it by <Enter>");
@@ -60,7 +61,7 @@ namespace Kolkulator
                     WriteLine("the result of {0} - {1} = {2}", num1, num2, res1);
                     shrt.Paktc();
                 }
-                else if (cho == "3") //Multiplication
+                else if (cho == '3') //Multiplication
                 {
                     Clear();
                     WriteLine("type the first number and confirm it by <Enter>");
@@ -74,7 +75,7 @@ namespace Kolkulator
                     WriteLine("the result of {0} * {1} = {2}", num1, num2, res1);
                     shrt.Paktc();
                 }
-                else if (cho == "4") //Division
+                else if (cho == '4') //Division
                 {
                     Clear();
                     WriteLine("type the first number and confirm it by <Enter>");
@@ -88,7 +89,7 @@ namespace Kolkulator
                     WriteLine("the result of {0} / {1} = {2}", num1, num2, res1);
                     shrt.Paktc();
                 }
-                else if (cho == "5") //Power
+                else if (cho == '5') //Power
                 {
                     Clear();
                     WriteLine("type the number and confirm it with <Enter>");
@@ -101,7 +102,7 @@ namespace Kolkulator
                     WriteLine("the result of {0} to the power of {1} = {2}", num1, num2, res1);
                     shrt.Paktc();
                 }
-                else if (cho == "6") //Root
+                else if (cho == '6') //Root
                 {
                     Clear();
                     WriteLine("type the number and confirm it with <Enter>");
@@ -134,7 +135,7 @@ namespace Kolkulator
                     }
                     shrt.Paktc();
                 }
-                else if(cho == "7") //Quadratic Equasion
+                else if(cho == '7') //Quadratic Equasion
                 {
                     Clear();
                     WriteLine("type A in the equasion and confirm it with <Enter>");
@@ -154,7 +155,7 @@ namespace Kolkulator
                                             "x2 = {1:0.00}", res1, res2));
                     shrt.Paktc();
                 }
-                else if (cho == "8")
+                else if (cho == '8')
                 {
                     Clear();
                     WriteLine("type size in GB and confirm it with <Enter>");
@@ -165,7 +166,7 @@ namespace Kolkulator
                     WriteLine(String.Format("manufacturers say {0}GB but it's {1:0.00}", num1, res1));
                     shrt.Paktc();
                 }
-                else if (cho == "9") //Quit
+                else if (cho == '9') //Quit
                 {
                     break;
                 }
