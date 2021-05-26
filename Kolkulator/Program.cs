@@ -2,17 +2,15 @@
 
 namespace Kolkulator
 {
-    class Program
+    internal static class Program
     {
-        static void Main(string[] args)
+        private static void Main()
         {
-            Short shrt = new Short();
+            var shrt = new Short();
 
             while(true)
             {
-                char cho;
-
-                WriteLine("Kolulator by KoleckOLP, HorseArmore Inc.");
+                WriteLine("Kolulator by KoleckOLP, HorseArmored Inc.");
                 WriteLine("Choose 1-7\n\n" +
                           "1. Addition\n" +
                           "2. Subtraction\n" +
@@ -20,12 +18,12 @@ namespace Kolkulator
                           "4. Division\n" +
                           "5. Power\n" +
                           "6. Root\n" +
-                          "7. Quadratic Equasion\n" +
+                          "7. Quadratic Equation\n" +
                           // "8. Algebraic Expressions\n" +
                           "8. Real HDD/Flash space\n" +
                           "9. Quit");
                 Write("#");
-                cho = ReadKey().KeyChar;
+                var cho = ReadKey().KeyChar;
                 if(cho == '1') // Addition
                 {
                     shrt.Addition();
@@ -50,13 +48,13 @@ namespace Kolkulator
                 {
                     shrt.Root();
                 }
-                else if(cho == '7') // Quadratic Equasion
+                else if(cho == '7') // Quadratic Equation
                 {
                     shrt.QuadEqua();
                 }
                 else if (cho == '8')
                 {
-                    shrt.HDDSize();
+                    shrt.HddSize();
                 }
                 else if (cho == '9') // Quit
                 {
@@ -64,7 +62,7 @@ namespace Kolkulator
                 }
                 else
                 {
-                    shrt.BadI();
+                    Short.BadI();
                 }
             }
         }
